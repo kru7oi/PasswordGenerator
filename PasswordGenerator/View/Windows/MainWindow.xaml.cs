@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PasswordGenerator.AppData;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PasswordGenerator
 {
@@ -20,9 +8,18 @@ namespace PasswordGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        GenerationService _generationService;
         public MainWindow()
         {
             InitializeComponent();
+
+            _generationService = new GenerationService();
+        }
+
+        private void GenerateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int length = int.Parse(PasswordLengthTb.Text);
+            PasswordsLb.ItemsSource = _generationService.Start(length);
         }
     }
 }
