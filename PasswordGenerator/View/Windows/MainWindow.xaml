@@ -3,4 +3,11 @@
         Height="600" Width="600"
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+    </Grid>
 </Window>
