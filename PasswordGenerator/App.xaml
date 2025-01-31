@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PasswordGenerator" StartupUri="\View\Windows\MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="20" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="\Styles\TextBoxStyle.xaml" />
+                <ResourceDictionary Source="\Styles\TextBlockStyle.xaml" />
+                <ResourceDictionary Source="\Styles\ButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
