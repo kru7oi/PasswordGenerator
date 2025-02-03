@@ -24,5 +24,10 @@ namespace PasswordGenerator
         {
             InitializeComponent();
         }
+
+        private void GenerateBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PasswordGenerator"
         mc:Ignorable="d"
         Title="Генератор паролей" Height="600" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Margin="20" ShowGridLines="True">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="10" />
@@ -39,5 +39,42 @@
             <CheckBox Grid.Row="6" Content="Спец. Символы" />
         </Grid>
         <!-- #endregion -->
+        
+        <!-- #region Настройки генерации -->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Кол-во символов"/>
+            <TextBox Grid.Row="2" />
+
+            <TextBlock Grid.Row="4" Text="Кол-во паролей"/>
+            <TextBox Grid.Row="6"/>
+        </Grid>
+        <!-- #endregion -->
+
+        <Button Name="GenerateBtn" Grid.Row="2" Content="Сгенерировать" Click="GenerateBtn_Click"/>
+        
+        <!-- #region Список паролей -->
+        <Grid Grid.Row="4" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <ProgressBar Value="30" Minimum="0" Maximum="100"/>
+
+            <ListBox Grid.Row="2">
+                
+            </ListBox>
+        </Grid>
+        <!-- #endregion  -->
     </Grid>
 </Window>
