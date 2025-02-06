@@ -5,7 +5,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="\Styles\ButtonStyle.xaml"/>
+                <ResourceDictionary Source="\Styles\CheckBoxStyle.xaml"/>
                 <ResourceDictionary Source="\Styles\TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="\Styles\TextBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
