@@ -1,4 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+    <Style TargetType="TextBox">
+        <!--Размер шрифта-->
+        <Setter Property="FontSize" Value="20" />
+        <!--Семейство шрифта (тип)-->
+        <Setter Property="FontFamily" Value="\Resources\Fonts\#Manrope" />
+        <!--Вертикальное выравнивание содержимого-->
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <!--Внутренний отступ слева и справа-->
+        <Setter Property="Padding" Value="5 0" />
+    </Style>
 </ResourceDictionary>
