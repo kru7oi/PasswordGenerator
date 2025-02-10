@@ -8,16 +8,18 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ContentPresenter HorizontalAlignment="center" VerticalAlignment="Center" />
                     </Border>
-
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FF239234" />
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="#FF26A53A" />
+                            <Setter Property="FontSize" Value="10" />
                         </Trigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+
     </Style>
 </ResourceDictionary>
