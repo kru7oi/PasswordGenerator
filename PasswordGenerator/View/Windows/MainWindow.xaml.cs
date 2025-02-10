@@ -12,14 +12,16 @@ namespace PasswordGenerator
         public MainWindow()
         {
             InitializeComponent();
-
-            _generationService = new GenerationService();
         }
 
         private void GenerateBtn_Click(object sender, RoutedEventArgs e)
         {
+            _generationService = new GenerationService(NumbersCb.IsChecked.Value, SymbolsCb.IsChecked.Value, LowerCaseCb.IsChecked.Value, UpperCaseCb.IsChecked.Value, WordsCb.IsChecked.Value);
+
             int length = int.Parse(PasswordLengthTb.Text);
-            PasswordsLb.ItemsSource = _generationService.Start(length);
+            int passwordsCount = int.Parse(PasswordsCountTb.Text);
+
+            PasswordsLb.ItemsSource = _generationService.Start(length, passwordsCount);
         }
     }
 }
