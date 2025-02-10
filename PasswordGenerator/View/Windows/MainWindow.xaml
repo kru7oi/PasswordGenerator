@@ -67,7 +67,7 @@
                     <TextBox Width="50" />
                 </StackPanel>
 
-                <CheckBox Grid.Row="6" Content="Верхний регистр (A-Z)" />
+                <CheckBox Grid.Row="6" Content="Верхний регистр (A-Z)"/>
                 <CheckBox Grid.Row="8" Content="Нижний регистр (a-z)" />
                 <CheckBox Grid.Row="10" Content="Цифры (0-9)" />
                 <CheckBox Grid.Row="12" Content="Разделители" />
