@@ -33,10 +33,10 @@
                 <RowDefinition Height="10" />
             </Grid.RowDefinitions>
 
-            <CheckBox Content="Цифры" />
-            <CheckBox Grid.Row="2" Content="Маленькие буквы a - z" />
-            <CheckBox Grid.Row="4" Content="Большие буквы A - Z" />
-            <CheckBox Grid.Row="6" Content="Спец. Символы" />
+            <CheckBox Name="NumbersCb" Content="Цифры" />
+            <CheckBox Name="LowerCaseCb" Grid.Row="2" Content="Маленькие буквы a - z" />
+            <CheckBox Name="UpperCaseCb" Grid.Row="4" Content="Большие буквы A - Z" />
+            <CheckBox Name="SymbolsCb" Grid.Row="6" Content="Спец. Символы" />
         </Grid>
         <!-- #endregion -->
         
@@ -53,10 +53,10 @@
             </Grid.RowDefinitions>
 
             <TextBlock Text="Кол-во символов"/>
-            <TextBox Grid.Row="2" />
+            <TextBox Name="CharactersLengthTb" Grid.Row="2" />
 
             <TextBlock Grid.Row="4" Text="Кол-во паролей"/>
-            <TextBox Grid.Row="6"/>
+            <TextBox Name="PasswordsCountTb" Grid.Row="6"/>
         </Grid>
         <!-- #endregion -->
 
@@ -71,7 +71,7 @@
 
             <ProgressBar Value="30" Minimum="0" Maximum="100"/>
 
-            <ListBox Grid.Row="2">
+            <ListBox Name="PasswordsLb" Grid.Row="2">
                 
             </ListBox>
         </Grid>
