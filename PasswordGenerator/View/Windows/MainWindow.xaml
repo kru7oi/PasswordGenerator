@@ -67,11 +67,11 @@
                     <TextBox Width="50" />
                 </StackPanel>
 
-                <CheckBox Grid.Row="6" Content="Верхний регистр (A-Z)"/>
-                <CheckBox Grid.Row="8" Content="Нижний регистр (a-z)" />
-                <CheckBox Grid.Row="10" Content="Цифры (0-9)" />
-                <CheckBox Grid.Row="12" Content="Разделители" />
-                <CheckBox Grid.Row="14" Content="Спец. символы (!, @, #)" />
+                <CheckBox Name="UpperCaseCb" Grid.Row="6" Content="Верхний регистр (A-Z)"/>
+                <CheckBox Name="LowerCaseCb" Grid.Row="8" Content="Нижний регистр (a-z)" />
+                <CheckBox Name="NumbersCb" Grid.Row="10" Content="Цифры (0-9)" />
+                <CheckBox Name="SeparatorsCb" Grid.Row="12" Content="Разделители" />
+                <CheckBox Name="SymbolsCb" Grid.Row="14" Content="Спец. символы (!, @, #)" />
 
                 <Button Name="GenerateBtn" Grid.Row="16" Content="Сгенерировать" Click="GenerateBtn_Click"/>
             </Grid>

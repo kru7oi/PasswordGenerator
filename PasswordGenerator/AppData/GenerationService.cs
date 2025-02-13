@@ -11,33 +11,35 @@ namespace PasswordGenerator.AppData
         private const string SEPARATORS = "-_";
         private const string SYMBOLS = "!@#$%^&*()";
 
-        private readonly string pattern;
+        private readonly List<string> patterns = new List<string>();
 
         public GenerationService(bool useUpperCase, bool useLowerCase, bool useNumbers, bool useSeparators, bool useSymbols)
         {
-            if (useUpperCase) pattern += UPPER_CASE;
-            if (useLowerCase) pattern += LOWER_CASE;
-            if (useNumbers) pattern += NUMBERS;
-            if (useSeparators) pattern += SEPARATORS;
-            if (useSymbols) pattern += SYMBOLS;
+            if (useUpperCase) patterns.Add(UPPER_CASE);
+            if (useLowerCase) patterns.Add(LOWER_CASE);
+            if (useNumbers) patterns.Add(NUMBERS);
+            if (useSeparators) patterns.Add(SEPARATORS);
+            if (useSymbols) patterns.Add(SYMBOLS);
         }
 
-        public List<string> GeneratePassword(int length, int countOfPassword)
+        public List<string> GeneratePassword(int length, int countOfPasswords)
         {
             List<string> passwords = new List<string>();
             string password = string.Empty;
-
             Random random = new Random();
 
-            // Реализовать кол-во повторений в зависимости от countOfPassword.
-
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < countOfPasswords; i++)
             {
-                int characterIndex = random.Next(pattern.Length);
-                password += pattern[characterIndex];
-            }
+                for (int j = 0; j < length; j++)
+                {
+                    int patternIndex = random.Next(0, patterns.Count);
+                    int charIndexFromPattern = random.Next(0, patterns[patternIndex].Length);
 
-            passwords.Add(password);
+                    password += patterns[patternIndex][charIndexFromPattern];
+                }
+
+                passwords.Add(password);
+            }
 
             return passwords;
         }
